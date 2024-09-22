@@ -5,16 +5,18 @@ const slice = createSlice({
   initialState: { value: 500 },
   reducers: {
     deposit: (state, action) => {
-      return {
-        ...state,
-        value: state.value + action.payload,
-      };
+      state.value += action.payload;
+      //   return {
+      //     ...state,
+      //     value: state.value + action.payload,
+      //   };
     },
     withdraw: (state, action) => {
-      return {
-        ...state,
-        value: state.value - action.payload,
-      };
+      state.value -= action.payload;
+      //   return {
+      //     ...state,
+      //     value: state.value - action.payload,
+      //   };
     },
   },
 });

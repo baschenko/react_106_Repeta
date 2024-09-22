@@ -5,10 +5,11 @@ const slice = createSlice({
   initialState: { lang: "pl" },
   reducers: {
     changeLang: (state, action) => {
-      return {
-        ...state,
-        lang: action.payload,
-      };
+      state.lang = action.payload;
+      //   return {
+      //     ...state,
+      //     lang: action.payload,
+      //   };
     },
   },
 });
