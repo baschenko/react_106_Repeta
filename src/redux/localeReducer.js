@@ -6,10 +6,6 @@ const slice = createSlice({
   reducers: {
     changeLang: (state, action) => {
       state.lang = action.payload;
-      //   return {
-      //     ...state,
-      //     lang: action.payload,
-      //   };
     },
   },
 });
@@ -17,18 +13,3 @@ const slice = createSlice({
 export const { changeLang } = slice.actions;
 
 export default slice.reducer;
-
-// export const changeLang = createAction("locale/changeLang");
-
-// export default function localeReducer(state = { lang: "pl" }, action) {
-//   switch (action.type) {
-//     case "locale/changeLang":
-//       return {
-//         ...state,
-//         lang: action.payload,
-//       };
-
-//     default:
-//       return state;
-//   }
-// }

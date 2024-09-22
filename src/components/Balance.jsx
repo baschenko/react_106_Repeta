@@ -1,8 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { deposit, withdraw } from "../redux/balanceSlice";
+import { selectBalance } from "../redux/selectors";
 
 export default function Balance() {
-  const balance = useSelector((state) => state.balance.value);
+  const balance = useSelector(selectBalance);
   const dispatch = useDispatch();
 
   const handleDeposit = () => {
