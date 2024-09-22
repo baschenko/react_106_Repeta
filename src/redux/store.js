@@ -42,7 +42,6 @@ const rootReducer = (state = initialState, action) => {
     default:
       return state;
   }
-  return state;
 };
 
 export const store = configureStore({
